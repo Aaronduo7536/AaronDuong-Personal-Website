@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1" />
+    <title>My Personal Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Aaron Duong's Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hobbies.html">Hobbies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa-solid fa-football"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container my-5 p-5 rounded-3" style="background-color: #D2B48C;">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center">
+      <img src="../resources/img/img1.jpg" class="img-fluid rounded" alt="A photo of Aaron Duong">
+    </div>
+
+    <div class="col-md-8">
+      <h2>About Me</h2>
+      <p>
+        Hello, my name is Aaron Duong! I am currently a sophomore studying Computer Science and Business at CU Boulder. I currently work as an IT for the Leeds School of Business, and hope to get into either software development, or consulting. Outside of school I am an avid sports fan, as well as an active video gamer.
+      </p>
+      <div class="text-center mt-4">
+        <a href="resume.html" class="btn btn-dark">View My Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <a href="https://www.linkedin.com/in/aaron-duong1/" target="_blank" class="text-white">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+  </div>
+</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+<!--
+Prompt: "Give me a barebones HTML structure for my personal website without adding any additional sections"
+Model: Gemini 2.5 Pro
+Response: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1" />
+    <title>My Personal Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+Prompt: On the extreme right of the Navigation Bar add an icon, this can be an icon of your choice.
+Model: Gemini 2.5 Pro
+Response: Yes, we can do that. The best way to add icons is by using an icon library like Font Awesome.
+
+1. Add Font Awesome to Your Page
+First, you need to link the Font Awesome stylesheet in your HTML. Add this <link> tag inside the <head> section of your home.html file, right below the Bootstrap link.
+
+HTML
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+2. Update Your Navigation Bar
+Now, replace your entire existing <nav> block with this updated code. I've added a second list for the icon and used the Bootstrap class ms-auto to push it to the far right.
+
+HTML
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Website</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hobbies.html">Hobbies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user-circle fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+The <i class="fas fa-user-circle fa-lg"></i> tag is what creates the user icon. The fa-lg class makes it a little larger and easier to see.
+
+
+
+Prompt: How do I center my resume button below the text?
+Model: Gemini 2.5 pro 
+Response: You can center the button by wrapping it in a <div> and using one of Bootstrap's text-centering utility classes.
+
+Find the "Description Column" in your home.html file and replace it with this updated code. I've added a <div class="text-center"> around your button link.
+
+HTML
+
+<div class="col-md-8">
+  <h2>About Me</h2>
+  <p>
+    Hello, my name is Aaron Duong! I am currently a sophomore studying Computer Science and Business at CU Boulder. I currently work as an IT for the Leeds School of Business, and hope to get into either software development, or consulting. Outside of school I am an avid sports fan, as well as an active video gamer.
+  </p>
+  
+  <div class="text-center mt-4">
+    <a href="resume.html" class="btn btn-primary">View My Resume</a>
+  </div>
+</div>
+The text-center class centers the button, and mt-4 adds a bit of margin to the top, giving it some nice spacing.
+
+Prompt: 
+Model: Gemini Pro 2.5
+
+
+
+Response: <div class="container my-5 p-5 bg-light rounded-3">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center">
+      <img src="../resources/img/img1.jpg" class="img-fluid rounded" alt="A photo of Aaron Duong">
+    </div>
+
+    <div class="col-md-8">
+      <h2>About Me</h2>
+      <p>
+        Hello, my name is Aaron Duong! I am currently a sophomore studying Computer Science and Business at CU Boulder. I currently work as an IT for the Leeds School of Business, and hope to get into either software development, or consulting. Outside of school I am an avid sports fan, as well as an active video gamer.
+      </p>
+      <div class="text-center mt-4">
+        <a href="resume.html" class="btn btn-primary">View My Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+Prompt: Lastly how do i do Add a footer with all social media links you would like to provide. Include at least one. Here's a website that is generally used to download any kind of icons: https://www.flaticon.com/. You can also import icons directly into your HTML using the fontawesome toolkit.
+Model: Gemini 2.5 Pro
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-2">Connect with me on LinkedIn</p>
+    <a href="https://www.linkedin.com/in/aaron-duong1/" target="_blank" class="text-white">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+  </div>
+</footer>
+
+
+-->

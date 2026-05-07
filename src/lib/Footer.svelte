@@ -6,7 +6,7 @@
               flex items-center justify-between gap-4 flex-wrap">
   <p class="font-sans text-[12px] text-ink-muted">© 2025 Aaron Duong.</p>
   <div class="flex gap-6">
-    <a href="https://github.com/aadu7536" target="_blank" rel="noopener"
+    <a href="https://github.com/Aaronduo7536" target="_blank" rel="noopener"
        class="font-sans text-[12px] font-medium text-ink-muted hover:text-accent transition-colors">
       GitHub
     </a>

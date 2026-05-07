@@ -24,6 +24,7 @@
       link:    'https://github.com/Huntwr/Bird-Brain',
       images:  [imgBirdBrainMap, imgBirdBrainPost],
       imgAlts: ['Bird Brain map view', 'Bird Brain post view'],
+      imgPos:  ['top', 'center 60%'],
     },
     {
       number:  '03',
@@ -66,8 +67,9 @@
               {#each project.images as src, j}
                 <div class="overflow-hidden {project.images.length === 1 ? 'col-span-2' : ''}">
                   <img {src} alt={project.imgAlts[j]}
-                       class="w-full h-52 object-cover object-top group-hover:scale-105
-                              transition-transform duration-500" />
+                       class="w-full h-52 object-cover group-hover:scale-105
+                              transition-transform duration-500"
+                       style="object-position: {project.imgPos?.[j] ?? 'top'}" />
                 </div>
               {/each}
             </div>

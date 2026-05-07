@@ -56,7 +56,7 @@
       </a>
 
       <!-- GitHub -->
-      <a href="https://github.com/aadu7536" target="_blank" rel="noopener"
+      <a href="https://github.com/Aaronduo7536" target="_blank" rel="noopener"
          class="group flex flex-col items-center gap-3 py-7 px-10 min-w-[180px]
                 border border-accent/15 rounded-2xl
                 hover:border-accent/40 hover:-translate-y-1
@@ -78,7 +78,7 @@
         </div>
         <div class="text-center">
           <p class="font-sans text-[13px] font-semibold text-ink">GitHub</p>
-          <p class="font-sans text-[12px] text-ink-muted mt-0.5">@aadu7536</p>
+          <p class="font-sans text-[12px] text-ink-muted mt-0.5">@Aaronduo7536</p>
         </div>
       </a>
 

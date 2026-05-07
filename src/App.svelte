@@ -102,7 +102,7 @@
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/aadu7536" target="_blank" rel="noopener"
+        <a href="https://github.com/Aaronduo7536" target="_blank" rel="noopener"
            class="group flex items-center gap-4 p-4 rounded-2xl border border-accent/15
                   hover:border-accent/35 hover:bg-bg transition-all duration-200">
           <div class="w-9 h-9 rounded-full bg-sand flex items-center justify-center shrink-0
@@ -121,7 +121,7 @@
           </div>
           <div>
             <p class="font-sans text-[13px] font-semibold text-ink">GitHub</p>
-            <p class="font-sans text-[11px] text-ink-muted">@aadu7536</p>
+            <p class="font-sans text-[11px] text-ink-muted">@Aaronduo7536</p>
           </div>
         </a>
       </div>

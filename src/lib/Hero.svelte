@@ -1,5 +1,5 @@
 <script>
-  import photo from '../assets/photo.jpg'
+  import photo from '../assets/senior-pic.jpg'
 </script>
 
 <section id="hero" class="min-h-screen flex flex-col justify-center pt-16 px-6 lg:px-20 relative overflow-hidden bg-bg">
@@ -9,34 +9,29 @@
     <div class="absolute bottom-1/3 left-1/5 w-[380px] h-[380px] rounded-full bg-sand/50 blur-3xl"></div>
   </div>
 
-  <div class="relative max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-24 items-center">
+  <div class="relative max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
     <!-- Left: text -->
     <div>
-      <!-- Eyebrow -->
       <div class="flex items-center gap-3 font-sans text-[12px] font-semibold tracking-[0.18em]
                   uppercase text-accent mb-5 [animation:fadeUp_0.7s_0.2s_both]">
         <span class="w-8 h-px bg-accent shrink-0"></span>
-        Software Engineer &amp; CS Student
+        CS @ CU Boulder &nbsp;·&nbsp; Incoming Data Analyst Intern
       </div>
 
-      <!-- Name -->
       <h1 class="font-sans font-bold leading-[1.05] tracking-tight text-ink mb-7
                  [animation:fadeUp_0.8s_0.35s_both]"
-          style="font-size: clamp(48px, 8vw, 88px);">
+          style="font-size: clamp(48px, 7vw, 88px);">
         Aaron<br>
-        <span class="text-accent">Duong.</span>
+        <span class="text-accent">Duong</span>
       </h1>
 
-      <!-- Tagline -->
       <p class="font-serif text-ink-mid mb-12 max-w-lg leading-relaxed
                 [animation:fadeUp_0.8s_0.5s_both]"
-         style="font-size: clamp(16px, 2vw, 20px);">
-        Building thoughtful software at the intersection of data, APIs,
-        and real-world maps. CS major at the University of Colorado Boulder.
+         style="font-size: clamp(16px, 1.8vw, 19px);">
+        Building things that connect technology, data, and real world decision making.
       </p>
 
-      <!-- CTAs -->
       <div class="flex gap-4 flex-wrap [animation:fadeUp_0.8s_0.65s_both]">
         <a href="#projects"
            class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-accent text-bg-card
@@ -54,15 +49,14 @@
       </div>
     </div>
 
-    <!-- Right: photo -->
-    <div class="flex justify-center lg:justify-end [animation:fadeUp_0.9s_0.55s_both]">
+    <!-- Right: photo — centered in its column -->
+    <div class="flex justify-center items-center [animation:fadeUp_0.9s_0.55s_both]">
       <div class="relative">
-        <!-- Soft glow behind photo -->
         <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-sand to-warm/30 blur-2xl opacity-70"></div>
         <img
           src={photo}
           alt="Aaron Duong"
-          class="relative w-64 sm:w-72 lg:w-80 xl:w-[340px] aspect-[3/4] object-cover
+          class="relative w-64 sm:w-72 lg:w-80 xl:w-[340px] aspect-[3/4] object-cover object-center
                  rounded-3xl shadow-2xl shadow-accent/20 ring-1 ring-sand-dark"
         />
       </div>

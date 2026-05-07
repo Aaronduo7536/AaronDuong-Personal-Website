@@ -1,5 +1,7 @@
 <script>
   import { onMount } from 'svelte'
+  import { contactOpen } from './stores.js'
+
   let scrolled = false
 
   onMount(() => {
@@ -12,7 +14,6 @@
     ['#about',      'About'],
     ['#projects',   'Projects'],
     ['#experience', 'Experience'],
-    ['#contact',    'Contact'],
   ]
 </script>
 
@@ -20,7 +21,7 @@
             bg-bg/90 backdrop-blur-lg border-b border-accent/10 transition-shadow duration-300
             {scrolled ? 'shadow-[0_2px_24px_rgba(42,31,20,0.07)]' : ''}">
   <span class="font-sans font-bold text-[15px] tracking-wide text-ink">Aaron Duong</span>
-  <ul class="hidden sm:flex gap-8 list-none m-0 p-0">
+  <ul class="hidden sm:flex gap-8 list-none m-0 p-0 items-center">
     {#each links as [href, label]}
       <li>
         <a {href}
@@ -30,5 +31,13 @@
         </a>
       </li>
     {/each}
+    <li>
+      <button
+        on:click={() => $contactOpen = true}
+        class="font-sans text-[13px] font-medium tracking-[0.06em] uppercase
+               text-ink-mid hover:text-accent transition-colors duration-200">
+        Contact
+      </button>
+    </li>
   </ul>
 </nav>

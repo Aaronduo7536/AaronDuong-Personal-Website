@@ -2,55 +2,69 @@
   import { reveal } from './actions.js'
 </script>
 
-<section id="contact" class="py-24 px-6 lg:px-20 bg-bg-alt text-center">
-  <div class="max-w-xl mx-auto">
-    <div use:reveal class="flex justify-center items-center gap-3 font-sans text-[11px] font-semibold
-                           tracking-[0.18em] uppercase text-accent mb-3">
+<section id="contact" class="py-16 px-6 lg:px-20 bg-bg">
+  <div class="max-w-5xl mx-auto">
+
+    <div use:reveal class="flex items-center gap-3 font-sans text-[11px] font-semibold
+                           tracking-[0.18em] uppercase text-accent mb-10">
       Contact
       <span class="block w-12 h-px bg-accent"></span>
     </div>
 
-    <h2 use:reveal={{ delay: 100 }}
-        class="font-sans font-bold text-4xl lg:text-5xl tracking-tight text-ink mb-6 leading-tight">
-      Let's Connect
-    </h2>
+    <div use:reveal={{ delay: 80 }} class="flex justify-center gap-5 flex-wrap">
 
-    <p use:reveal={{ delay: 160 }}
-       class="font-serif text-[18px] text-ink-mid leading-relaxed mb-12">
-      Whether it's a project collaboration, internship opportunity, or just a conversation
-      about software — I'd love to hear from you.
-    </p>
-
-    <div use:reveal={{ delay: 220 }} class="flex justify-center gap-5 flex-wrap">
-      <!-- Email card -->
-      <a href="mailto:aadu7536@colorado.edu"
-         class="group flex flex-col items-center gap-3 py-8 px-10 min-w-[160px]
-                bg-bg-card border border-accent/15 rounded-2xl
+      <!-- Email -->
+      <a href="mailto:ajd23021@gmail.com"
+         class="group flex flex-col items-center gap-3 py-7 px-10 min-w-[180px]
+                border border-accent/15 rounded-2xl
                 hover:border-accent/40 hover:-translate-y-1
-                hover:shadow-[0_12px_36px_rgba(42,31,20,0.08)]
-                transition-all duration-300 text-ink-mid hover:text-accent">
-        <div class="w-11 h-11 rounded-full bg-sand flex items-center justify-center
+                hover:shadow-[0_12px_32px_rgba(42,31,20,0.08)]
+                transition-all duration-250 text-ink-mid hover:text-accent">
+        <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center shrink-0
                     group-hover:bg-accent/10 transition-colors duration-200">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
           </svg>
         </div>
-        <span class="font-sans text-[13px] font-semibold">Email</span>
-        <span class="font-sans text-[12px] opacity-70">aadu7536@colorado.edu</span>
+        <div class="text-center">
+          <p class="font-sans text-[13px] font-semibold text-ink">Email</p>
+          <p class="font-sans text-[12px] text-ink-muted mt-0.5">ajd23021@gmail.com</p>
+        </div>
       </a>
 
-      <!-- GitHub card -->
-      <a href="https://github.com/aadu7536" target="_blank" rel="noopener"
-         class="group flex flex-col items-center gap-3 py-8 px-10 min-w-[160px]
-                bg-bg-card border border-accent/15 rounded-2xl
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/aaron-duong1/" target="_blank" rel="noopener"
+         class="group flex flex-col items-center gap-3 py-7 px-10 min-w-[180px]
+                border border-accent/15 rounded-2xl
                 hover:border-accent/40 hover:-translate-y-1
-                hover:shadow-[0_12px_36px_rgba(42,31,20,0.08)]
-                transition-all duration-300 text-ink-mid hover:text-accent">
-        <div class="w-11 h-11 rounded-full bg-sand flex items-center justify-center
+                hover:shadow-[0_12px_32px_rgba(42,31,20,0.08)]
+                transition-all duration-250 text-ink-mid hover:text-accent">
+        <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center shrink-0
                     group-hover:bg-accent/10 transition-colors duration-200">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </div>
+        <div class="text-center">
+          <p class="font-sans text-[13px] font-semibold text-ink">LinkedIn</p>
+          <p class="font-sans text-[12px] text-ink-muted mt-0.5">aaron-duong1</p>
+        </div>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/aadu7536" target="_blank" rel="noopener"
+         class="group flex flex-col items-center gap-3 py-7 px-10 min-w-[180px]
+                border border-accent/15 rounded-2xl
+                hover:border-accent/40 hover:-translate-y-1
+                hover:shadow-[0_12px_32px_rgba(42,31,20,0.08)]
+                transition-all duration-250 text-ink-mid hover:text-accent">
+        <div class="w-10 h-10 rounded-full bg-sand flex items-center justify-center shrink-0
+                    group-hover:bg-accent/10 transition-colors duration-200">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
                      0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
                      -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
@@ -62,9 +76,12 @@
                      C22 6.484 17.522 2 12 2z"/>
           </svg>
         </div>
-        <span class="font-sans text-[13px] font-semibold">GitHub</span>
-        <span class="font-sans text-[12px] opacity-70">@aadu7536</span>
+        <div class="text-center">
+          <p class="font-sans text-[13px] font-semibold text-ink">GitHub</p>
+          <p class="font-sans text-[12px] text-ink-muted mt-0.5">@aadu7536</p>
+        </div>
       </a>
+
     </div>
   </div>
 </section>

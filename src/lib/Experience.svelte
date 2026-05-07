@@ -19,7 +19,7 @@
       org:     'Leeds School of Business · CU Boulder',
       bullets: [
         'Provide technical support to 5,000+ students, faculty, and staff',
-        'Manage installation and maintenance of 250+ computer systems',
+        'Handle installation and maintenance of 250+ computer systems',
         'Lead and mentor a team of 6 student technicians',
         'Manage the Bloomberg Lab and CU Leeds RAP Dorm',
       ],

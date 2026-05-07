@@ -81,7 +81,15 @@
       pageIdx = i   // snap without animation for edge cases
     }
   }
+
+  let lightbox = null
+
+  function openLightbox(p) { lightbox = p }
+  function closeLightbox() { lightbox = null }
+  function onKeydown(e) { if (e.key === 'Escape') closeLightbox() }
 </script>
+
+<svelte:window on:keydown={onKeydown} />
 
 <section class="py-24 px-6 lg:px-20 bg-bg">
   <div class="max-w-5xl mx-auto space-y-20">
@@ -131,10 +139,14 @@
             style="opacity:{fading ? 0 : 1}; transform:translateX({tx}px);
                    transition: opacity 190ms ease, transform 190ms ease;">
             {#each shown as p (p.alt)}
-              <div class="overflow-hidden rounded-xl aspect-[4/3] bg-sand">
+              <button
+                type="button"
+                class="overflow-hidden rounded-xl aspect-[4/3] bg-sand cursor-zoom-in"
+                on:click={() => openLightbox(p)}
+              >
                 <img src={p.src} alt={p.alt} class="w-full h-full object-cover"
                      style="object-position: {p.pos ?? 'center'}" />
-              </div>
+              </button>
             {/each}
           </div>
         </div>
@@ -170,3 +182,30 @@
 
   </div>
 </section>
+
+<!-- Lightbox -->
+{#if lightbox}
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+    on:click={closeLightbox}
+    role="dialog"
+    aria-modal="true"
+    aria-label={lightbox.alt}
+  >
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors
+             font-sans text-2xl leading-none p-2"
+      on:click={closeLightbox}
+      aria-label="Close"
+    >
+      ✕
+    </button>
+    <img
+      src={lightbox.src}
+      alt={lightbox.alt}
+      class="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+      on:click|stopPropagation
+    />
+  </div>
+{/if}

@@ -37,7 +37,23 @@
       imgAlts: [],
     },
   ]
+
+  let lightbox = null // { src, alt }
+
+  function openLightbox(src, alt) {
+    lightbox = { src, alt }
+  }
+
+  function closeLightbox() {
+    lightbox = null
+  }
+
+  function onKeydown(e) {
+    if (e.key === 'Escape') closeLightbox()
+  }
 </script>
+
+<svelte:window on:keydown={onKeydown} />
 
 <section id="projects" class="py-24 px-6 lg:px-20 bg-bg">
   <div class="max-w-5xl mx-auto">
@@ -66,12 +82,16 @@
           {#if project.images.length > 0}
             <div class="grid grid-cols-2 gap-0 h-52 overflow-hidden">
               {#each project.images as src, j}
-                <div class="overflow-hidden {project.images.length === 1 ? 'col-span-2' : ''}">
+                <button
+                  type="button"
+                  class="overflow-hidden cursor-zoom-in {project.images.length === 1 ? 'col-span-2' : ''}"
+                  on:click={() => openLightbox(src, project.imgAlts[j])}
+                >
                   <img {src} alt={project.imgAlts[j]}
                        class="w-full h-52 object-cover group-hover:scale-105
                               transition-transform duration-500"
                        style="object-position: {project.imgPos?.[j] ?? 'top'}; {project.imgStyle?.[j] ?? ''}" />
-                </div>
+                </button>
               {/each}
             </div>
           {/if}
@@ -114,3 +134,30 @@
     </div>
   </div>
 </section>
+
+<!-- Lightbox -->
+{#if lightbox}
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+    on:click={closeLightbox}
+    role="dialog"
+    aria-modal="true"
+    aria-label={lightbox.alt}
+  >
+    <button
+      type="button"
+      class="absolute top-4 right-4 text-white/70 hover:text-white transition-colors
+             font-sans text-2xl leading-none p-2"
+      on:click={closeLightbox}
+      aria-label="Close"
+    >
+      ✕
+    </button>
+    <img
+      src={lightbox.src}
+      alt={lightbox.alt}
+      class="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
+      on:click|stopPropagation
+    />
+  </div>
+{/if}

@@ -22,9 +22,10 @@
       desc:    'A full-stack web app for logging, identifying, and exploring bird sightings on an interactive map. Uses Mapbox GL JS for geospatial visualization, the eBird API for bird data, and Google Gemini AI for photo-based bird identification.',
       stack:   ['Node.js', 'Express', 'PostgreSQL', 'Mapbox', 'eBird API', 'Gemini AI'],
       link:    'https://github.com/Huntwr/Bird-Brain',
-      images:  [imgBirdBrainMap, imgBirdBrainPost],
-      imgAlts: ['Bird Brain map view', 'Bird Brain post view'],
-      imgPos:  ['top', 'center 60%'],
+      images:   [imgBirdBrainMap],
+      imgAlts:  ['Bird Brain map view'],
+      imgPos:   ['40% 44%'],
+      imgStyle: ['transform: scale(1.3); transform-origin: center;'],
     },
     {
       number:  '03',
@@ -69,7 +70,7 @@
                   <img {src} alt={project.imgAlts[j]}
                        class="w-full h-52 object-cover group-hover:scale-105
                               transition-transform duration-500"
-                       style="object-position: {project.imgPos?.[j] ?? 'top'}" />
+                       style="object-position: {project.imgPos?.[j] ?? 'top'}; {project.imgStyle?.[j] ?? ''}" />
                 </div>
               {/each}
             </div>

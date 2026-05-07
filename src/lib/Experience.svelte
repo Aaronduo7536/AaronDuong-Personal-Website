@@ -95,7 +95,7 @@
                 hover:bg-accent-lt hover:-translate-y-0.5 transition-all duration-250">
         Download Resume ↓
       </a>
-      <a href="mailto:aadu7536@colorado.edu"
+      <a href="mailto:ajd23021@gmail.com"
          class="inline-flex items-center gap-2 px-7 py-3 rounded-full
                 border border-accent/30 text-ink-mid font-sans text-[13px] font-semibold
                 hover:border-accent hover:text-accent hover:-translate-y-0.5 transition-all duration-250">

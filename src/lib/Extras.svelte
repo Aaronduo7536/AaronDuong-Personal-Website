@@ -21,7 +21,7 @@
     { src: imgBoulder,      alt: 'Boulder, CO',  pos: 'center 65%' },
     { src: imgNightMtn,     alt: 'Night mountains' },
     // Page 3
-    { src: imgFishing,      alt: 'Fishing' },
+    { src: imgFishing,      alt: 'Fishing', desktopOnly: true },
     { src: imgFlagfootball, alt: 'Flag football' },
     { src: imgFrisbee,      alt: 'Frisbee' },
   ]
@@ -121,7 +121,7 @@
 
       <!-- Mobile grid: all 9 photos -->
       <div class="grid grid-cols-2 gap-3 sm:hidden">
-        {#each photos as p}
+        {#each photos.filter(p => !p.desktopOnly) as p}
           <button
             type="button"
             class="overflow-hidden rounded-xl aspect-[4/3] bg-sand cursor-zoom-in"

@@ -2,8 +2,8 @@
   import { reveal } from './actions.js'
 
   const skills = [
-    'Python', 'R', 'SQL', 'JavaScript', 'Node.js',
-    'React', 'PostgreSQL', 'Docker', 'FastAPI', 'Mapbox', 'Git',
+    'C++', 'C', 'Python', 'R', 'SQL', 'JavaScript', 'Node.js',
+    'React', 'HTML', 'CSS'
   ]
 </script>
 

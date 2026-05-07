@@ -119,8 +119,22 @@
         <span class="block w-12 h-px bg-accent"></span>
       </div>
 
-      <!-- Carousel row -->
-      <div class="flex items-center gap-4">
+      <!-- Mobile grid: all 9 photos -->
+      <div class="grid grid-cols-2 gap-3 sm:hidden">
+        {#each photos as p}
+          <button
+            type="button"
+            class="overflow-hidden rounded-xl aspect-[4/3] bg-sand cursor-zoom-in"
+            on:click={() => openLightbox(p)}
+          >
+            <img src={p.src} alt={p.alt} class="w-full h-full object-cover"
+                 style="object-position: {p.pos ?? 'center'}" />
+          </button>
+        {/each}
+      </div>
+
+      <!-- Carousel row (desktop only) -->
+      <div class="hidden sm:flex items-center gap-4">
         <button
           on:click={() => go(-1)}
           disabled={fading}
@@ -165,7 +179,7 @@
       </div>
 
       <!-- Page dots -->
-      <div class="flex justify-center gap-2 mt-6">
+      <div class="hidden sm:flex justify-center gap-2 mt-6">
         {#each Array(PAGE_COUNT) as _, i}
           <button
             on:click={() => jumpTo(i)}

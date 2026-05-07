@@ -135,13 +135,14 @@
         <!-- Single stable grid — opacity + translateX via inline style -->
         <div class="flex-1">
           <div
-            class="grid grid-cols-3 gap-3"
+            class="grid grid-cols-1 sm:grid-cols-3 gap-3"
             style="opacity:{fading ? 0 : 1}; transform:translateX({tx}px);
                    transition: opacity 190ms ease, transform 190ms ease;">
-            {#each shown as p (p.alt)}
+            {#each shown as p, k (p.alt)}
               <button
                 type="button"
-                class="overflow-hidden rounded-xl aspect-[4/3] bg-sand cursor-zoom-in"
+                class="overflow-hidden rounded-xl aspect-[4/3] bg-sand cursor-zoom-in
+                       {k > 0 ? 'hidden sm:block' : ''}"
                 on:click={() => openLightbox(p)}
               >
                 <img src={p.src} alt={p.alt} class="w-full h-full object-cover"

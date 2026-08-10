@@ -1,4 +1,5 @@
 <script>
+  import { fade, scale } from 'svelte/transition'
   import { reveal } from './actions.js'
 
   import imgNextDownMain  from '../assets/NextDownMain.png'
@@ -138,6 +139,7 @@
 <!-- Lightbox -->
 {#if lightbox}
   <div
+    transition:fade={{ duration: 200 }}
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
     on:click={closeLightbox}
     role="dialog"
@@ -154,6 +156,7 @@
       ✕
     </button>
     <img
+      transition:scale={{ duration: 220, start: 0.94 }}
       src={lightbox.src}
       alt={lightbox.alt}
       class="max-w-[90vw] max-h-[90vh] object-contain rounded-xl shadow-2xl"
